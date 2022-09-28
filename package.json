@@ -1,0 +1,14 @@
+{
+  "name": "wkhtmltopdf-lambda-layer",
+  "version": "1.0.0",
+  "description": "AWS Lambda Layer for wkhtmltopdf",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Araan Branco <araanbranco@protonmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "serverless": "^3.22.0"
+  }
+}

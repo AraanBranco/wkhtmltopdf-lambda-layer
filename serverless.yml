@@ -1,0 +1,26 @@
+service: wkhtmltopdf-lambda-layer
+frameworkVersion: '3'
+
+package:
+  patterns:
+    - package**
+    - README.md
+    - serverless.**
+    - .git/**
+    - .serverless/**
+    - .gitignore
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+  region: 'us-east-1' # You region
+  memorySize: 512
+  timeout: 60
+  endpointType: private
+
+layers:
+  wkhtmltoxLayer:
+    name: ${self:service}
+    description: 'AWS Lambda Layer for generate PDF from HTML'
+    package:
+      artifact: wkhtmltox-0.12.6-4.amazonlinux2_lambda.zip
